@@ -1,0 +1,3 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/obie-account-info-standard.yaml, openapi/obie-payment-initiation-standard.yaml, openapi/obie-confirmation-funds-standard.yaml

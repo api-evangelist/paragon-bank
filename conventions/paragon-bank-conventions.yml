@@ -1,0 +1,52 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/obie-payment-initiation-standard.yaml, openapi/obie-account-info-standard.yaml
+note: >-
+  Cross-cutting request/response semantics of the OBIE Read/Write v4.0.1 standard this profile
+  represents. Idempotency, JWS signing, and FAPI headers are defined by the standard.
+authentication:
+  style: oauth2
+  profile: OBIE FAPI 1.0 Advanced
+  flows:
+  - clientCredentials (TPP)
+  - authorizationCode (PSU / SCA)
+  transport: mutual-TLS bound tokens
+  see: authentication/paragon-bank-authentication.yml
+idempotency:
+  supported: true
+  header: x-idempotency-key
+  scope: all payment- and consent-creation POST operations
+  retention: 24 hours
+  conflict_status: 409
+  note: Every request is processed once per x-idempotency-key; reuse with a changed payload returns 409.
+request_signing:
+  header: x-jws-signature
+  standard: detached JWS (RFC 7515)
+  applies_to: payment initiation & file payments
+tracing:
+  header: x-fapi-interaction-id
+  note: Client-supplied correlation id echoed by the ASPSP; x-fapi-auth-date and x-fapi-customer-ip-address
+    also carried.
+pagination:
+  style: page
+  response_fields:
+  - Links.Self
+  - Links.First
+  - Links.Prev
+  - Links.Next
+  - Links.Last
+  - Meta.TotalPages
+  note: Collection reads (transactions, accounts) return Links + Meta for page traversal.
+versioning:
+  scheme: uri-path
+  current: v4.0
+  path_prefix: /open-banking/v4.0/{aisp|pisp|cbpii}
+  opendata: v1.3
+  see: lifecycle/paragon-bank-lifecycle.yml
+error_envelope:
+  schema: OBErrorResponse1
+  media_type: application/json
+  see: errors/paragon-bank-problem-types.yml
+rate_limit_signal:
+  status: 429
+  note: 429 Too Many Requests; honour Retry-After.

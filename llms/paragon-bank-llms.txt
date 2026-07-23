@@ -1,0 +1,28 @@
+# Paragon Bank
+
+> Paragon Bank PLC is a UK specialist lender and retail savings bank (subsidiary of Paragon Banking Group PLC, LSE: PAG). It is a savings-and-lending institution, not a current-account provider, so it is not one of the CMA9 and publishes no confirmed developer portal or Open Banking API of its own. This profile captures the UK Open Banking (OBIE) standard specifications - Open Data v1.3 and the FAPI-secured Read/Write v4.0.1 family (Account & Transaction Information, Payment Initiation, Confirmation of Funds) - as the shared industry standard, clearly labelled unverified for this bank.
+
+## APIs (OBIE standard, unverified for Paragon)
+- [Open Data API](https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/): Public reference data - ATMs, branches, products.
+- [Account & Transaction Information (AIS)](https://openbankinguk.github.io/read-write-api-site3/v3.1.11/profiles/account-and-transaction-api-profile.html): FAPI-secured account, balance, transaction, party data.
+- [Payment Initiation (PIS)](https://openbankinguk.github.io/read-write-api-site3/v3.1.11/profiles/payment-initiation-api-profile.html): Domestic, scheduled, standing-order, international, file payments.
+- [Confirmation of Funds (CBPII)](https://openbankinguk.github.io/read-write-api-site3/v3.1.11/profiles/confirmation-of-funds-api-profile.html): Yes/no funds availability check.
+
+## Specs
+- openapi/obie-account-info-standard.yaml (OpenAPI 3.0, v4.0.1, 29 ops)
+- openapi/obie-payment-initiation-standard.yaml (OpenAPI 3.0, v4.0.1, 41 ops)
+- openapi/obie-confirmation-funds-standard.yaml (OpenAPI 3.0, v4.0.1, 4 ops)
+- openapi/obie-opendata-standard.json (Swagger 2.0, v1.3, 12 ops)
+
+## Semantics
+- authentication/paragon-bank-authentication.yml - OBIE FAPI OAuth2 (TPP clientCredentials, PSU authorizationCode)
+- scopes/paragon-bank-scopes.yml - OAuth scopes (accounts, payments, fundsconfirmations)
+- conventions/paragon-bank-conventions.yml - idempotency (x-idempotency-key, 24h), JWS signing, FAPI headers, pagination
+- errors/paragon-bank-problem-types.yml - OBErrorResponse1 envelope
+- conformance/paragon-bank-conformance.yml - OAuth2, OIDC, FAPI 1.0 Advanced, PSD2 SCA
+- lifecycle/paragon-bank-lifecycle.yml - uri-path versioning (v4.0)
+- agentic-access/paragon-bank-agentic-access.yml - recommended x-agentic-access contracts (86 ops)
+
+## About
+- [Paragon Bank](https://www.paragonbank.co.uk/)
+- [Paragon Banking Group (parent)](https://www.paragonbankinggroup.co.uk/)

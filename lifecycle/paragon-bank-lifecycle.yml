@@ -1,0 +1,19 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/*.yaml
+versioning:
+  scheme: uri-path
+  current: v4.0 (Read/Write), v1.3 (Open Data)
+  docs: https://openbankinguk.github.io/read-write-api-site3/
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: The OBIE standard is version-managed centrally by Open Banking Ltd; no Paragon-specific deprecation
+    policy or Sunset-header support was confirmed.
+sla:
+  url: null
+  note: No Paragon-published API SLA (Paragon operates no confirmed developer API).
+status_page: null
+deprecated_operations: []
+note: Lifecycle reflects the OBIE standard captured here; Paragon Bank publishes no developer portal,
+  status page, or deprecation policy of its own.

@@ -2,25 +2,19 @@ aid: paragon-bank
 url: https://raw.githubusercontent.com/api-evangelist/paragon-bank/refs/heads/main/apis.yml
 name: Paragon Bank
 kind: company
-description: >-
-  Paragon Bank PLC is a UK specialist lender and retail savings bank, the
-  principal banking subsidiary of Paragon Banking Group PLC (LSE: PAG), a FTSE
-  250 company founded in 1985 and headquartered in Solihull, West Midlands.
-  Authorised by the Prudential Regulation Authority and regulated by the
-  Financial Conduct Authority and the Prudential Regulation Authority (Firm
-  Reference Number 604551, company number 05390593), Paragon offers fixed-rate
-  and easy-access savings accounts and cash ISAs alongside buy-to-let and
-  residential mortgages, second-charge mortgages, development finance, motor
-  finance, and asset and commercial lending. As a savings-and-lending
-  institution rather than a personal current account provider, Paragon is not
-  one of the CMA9 and publishes no public developer portal or Open Banking API
-  surface of its own - its accounts are reachable to third parties only through
-  account-information aggregators. This profile represents the UK Open Banking
-  Implementation Entity (OBIE) standard - the PSD2 Open Data reference APIs and
-  the FAPI-secured Read/Write family (Account and Transaction Information,
-  Payment Initiation, Confirmation of Funds) - captured verbatim as the shared
-  industry standard and clearly labelled as unverified for this bank; no
-  Paragon-hosted endpoint was confirmed at profiling time.
+description: 'Paragon Bank PLC is a UK specialist lender and retail savings bank, the principal banking
+  subsidiary of Paragon Banking Group PLC (LSE: PAG), a FTSE 250 company founded in 1985 and headquartered
+  in Solihull, West Midlands. Authorised by the Prudential Regulation Authority and regulated by the Financial
+  Conduct Authority and the Prudential Regulation Authority (Firm Reference Number 604551, company number
+  05390593), Paragon offers fixed-rate and easy-access savings accounts and cash ISAs alongside buy-to-let
+  and residential mortgages, second-charge mortgages, development finance, motor finance, and asset and
+  commercial lending. As a savings-and-lending institution rather than a personal current account provider,
+  Paragon is not one of the CMA9 and publishes no public developer portal or Open Banking API surface
+  of its own - its accounts are reachable to third parties only through account-information aggregators.
+  This profile represents the UK Open Banking Implementation Entity (OBIE) standard - the PSD2 Open Data
+  reference APIs and the FAPI-secured Read/Write family (Account and Transaction Information, Payment
+  Initiation, Confirmation of Funds) - captured verbatim as the shared industry standard and clearly labelled
+  as unverified for this bank; no Paragon-hosted endpoint was confirmed at profiling time.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - Financial Services
@@ -39,14 +33,11 @@ specificationVersion: '0.19'
 apis:
 - aid: paragon-bank:paragon-open-data-api
   name: Paragon Bank Open Data API (OBIE standard, unverified)
-  description: >-
-    The UK Open Banking Open Data API - a public, unauthenticated reference-data
-    surface (ATMs, branches, personal and business current accounts, unsecured
-    SME loans, commercial credit cards) defined by the Open Banking
-    Implementation Entity. Captured here as the shared OBIE standard; Paragon
-    Bank does not publish a confirmed Open Data endpoint (no live host was
-    verified) and, as a savings-and-lending bank without current accounts, has
-    no CMA9 Open Data obligation.
+  description: The UK Open Banking Open Data API - a public, unauthenticated reference-data surface (ATMs,
+    branches, personal and business current accounts, unsecured SME loans, commercial credit cards) defined
+    by the Open Banking Implementation Entity. Captured here as the shared OBIE standard; Paragon Bank
+    does not publish a confirmed Open Data endpoint (no live host was verified) and, as a savings-and-lending
+    bank without current accounts, has no CMA9 Open Data obligation.
   humanURL: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
   tags:
   - Open Data
@@ -61,13 +52,11 @@ apis:
     url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
 - aid: paragon-bank:paragon-account-information-api
   name: Paragon Bank Account and Transaction Information API (OBIE standard, unverified)
-  description: >-
-    The OBIE Read/Write Account and Transaction Information (AIS) API standard -
-    FAPI-secured (OAuth2/OIDC, mutual-TLS, PSD2 strong customer authentication)
-    account, balance, transaction, and party data access for authorised third
-    parties. Captured here as the shared OBIE standard specification, not a
-    Paragon-hosted contract; no Paragon AIS endpoint or developer onboarding was
-    confirmed at profiling time.
+  description: The OBIE Read/Write Account and Transaction Information (AIS) API standard - FAPI-secured
+    (OAuth2/OIDC, mutual-TLS, PSD2 strong customer authentication) account, balance, transaction, and
+    party data access for authorised third parties. Captured here as the shared OBIE standard specification,
+    not a Paragon-hosted contract; no Paragon AIS endpoint or developer onboarding was confirmed at profiling
+    time.
   humanURL: https://openbankinguk.github.io/read-write-api-site3/v3.1.11/profiles/account-and-transaction-api-profile.html
   tags:
   - Account Information
@@ -83,13 +72,11 @@ apis:
     url: https://github.com/OpenBankingUK/read-write-api-specs
 - aid: paragon-bank:paragon-payment-initiation-api
   name: Paragon Bank Payment Initiation API (OBIE standard, unverified)
-  description: >-
-    The OBIE Read/Write Payment Initiation (PIS) API standard - FAPI-secured
-    initiation of domestic, scheduled, standing-order, international, and file
-    payments on behalf of a customer with PSD2 strong customer authentication.
-    Captured here as the shared OBIE standard specification, not a
-    Paragon-hosted contract; no Paragon PIS endpoint was confirmed and Paragon
-    does not document payment-initiation services.
+  description: The OBIE Read/Write Payment Initiation (PIS) API standard - FAPI-secured initiation of
+    domestic, scheduled, standing-order, international, and file payments on behalf of a customer with
+    PSD2 strong customer authentication. Captured here as the shared OBIE standard specification, not
+    a Paragon-hosted contract; no Paragon PIS endpoint was confirmed and Paragon does not document payment-initiation
+    services.
   humanURL: https://openbankinguk.github.io/read-write-api-site3/v3.1.11/profiles/payment-initiation-api-profile.html
   tags:
   - Payment Initiation
@@ -105,12 +92,10 @@ apis:
     url: https://github.com/OpenBankingUK/read-write-api-specs
 - aid: paragon-bank:paragon-confirmation-of-funds-api
   name: Paragon Bank Confirmation of Funds API (OBIE standard, unverified)
-  description: >-
-    The OBIE Read/Write Confirmation of Funds (CBPII) API standard -
-    FAPI-secured yes/no confirmation of available funds for a card-based payment
-    instrument issuer. Captured here as the shared OBIE standard specification,
-    not a Paragon-hosted contract; no Paragon CBPII endpoint was confirmed at
-    profiling time.
+  description: The OBIE Read/Write Confirmation of Funds (CBPII) API standard - FAPI-secured yes/no confirmation
+    of available funds for a card-based payment instrument issuer. Captured here as the shared OBIE standard
+    specification, not a Paragon-hosted contract; no Paragon CBPII endpoint was confirmed at profiling
+    time.
   humanURL: https://openbankinguk.github.io/read-write-api-site3/v3.1.11/profiles/confirmation-of-funds-api-profile.html
   tags:
   - Confirmation of Funds
@@ -124,6 +109,14 @@ apis:
   - type: APIReference
     url: https://github.com/OpenBankingUK/read-write-api-specs
 common:
+- type: AgenticAccess
+  url: agentic-access/paragon-bank-agentic-access.yml
+- type: DomainSecurity
+  url: security/paragon-bank-domain-security.yml
+- type: OAuthScopes
+  url: scopes/paragon-bank-scopes.yml
+- type: Authentication
+  url: authentication/paragon-bank-authentication.yml
 - type: Website
   url: https://www.paragonbank.co.uk/
 - type: About
@@ -140,6 +133,36 @@ common:
   url: https://www.paragonbank.co.uk/savings
 - type: TermsOfService
   url: https://www.paragonbank.co.uk/resources/paragonbank/documents/savings/general-terms-and-conditions
+- type: ErrorCatalog
+  url: errors/paragon-bank-problem-types.yml
+- type: Conformance
+  url: conformance/paragon-bank-conformance.yml
+- type: Conventions
+  url: conventions/paragon-bank-conventions.yml
+- type: Idempotency
+  url: conventions/paragon-bank-conventions.yml
+- type: Lifecycle
+  url: lifecycle/paragon-bank-lifecycle.yml
+- type: MCPServer
+  url: mcp/paragon-bank-mcp.yml
+- type: ToolCrosswalk
+  url: mcp/paragon-bank-tool-crosswalk.yml
+- type: LLMsTxt
+  url: llms/paragon-bank-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Overlay
+  name: Account Info overlay
+  url: overlays/paragon-bank-account-info-overlay.yaml
+- type: Overlay
+  name: Payment Initiation overlay
+  url: overlays/paragon-bank-payment-initiation-overlay.yaml
+- type: Overlay
+  name: Confirmation of Funds overlay
+  url: overlays/paragon-bank-confirmation-funds-overlay.yaml
+- type: Overlay
+  name: Open Data overlay
+  url: overlays/paragon-bank-opendata-overlay.yaml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

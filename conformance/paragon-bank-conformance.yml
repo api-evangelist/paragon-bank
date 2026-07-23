@@ -1,0 +1,36 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/*.yaml, openapi/obie-opendata-standard.json
+note: >-
+  Cross-cutting standards conformance of the OBIE standard this profile represents. No published
+  Paragon-specific compliance program (SOC2/ISO/PCI) was confirmed, so no Compliance pointer is emitted.
+standards:
+- id: oauth2
+  conforms: true
+  evidence: openapi securitySchemes type oauth2 (TPPOAuth2Security clientCredentials, PSUOAuth2Security
+    authorizationCode)
+- id: openid-connect
+  conforms: true
+  evidence: OBIE Read/Write uses OIDC hybrid flow + id_token for PSU authentication (FAPI profile)
+- id: fapi-1.0-advanced
+  conforms: true
+  evidence: x-fapi-* headers (auth-date, customer-ip-address, interaction-id), x-jws-signature request
+    signing, mutual-TLS-bound tokens per the OBIE FAPI profile
+- id: psd2-sca
+  conforms: true
+  evidence: Consent + PSU authorization-code flow enforces PSD2 strong customer authentication
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Uses OBIE OBErrorResponse1 envelope (application/json), not application/problem+json
+- id: rfc8594-sunset-header
+  conforms: false
+  evidence: No Sunset/Deprecation header support documented in the standard
+- id: idempotency
+  conforms: true
+  evidence: x-idempotency-key header on all payment/consent creation operations, 24h retention
+- id: json-api
+  conforms: false
+  evidence: OBIE uses its own Data/Links/Meta envelope, not JSON:API
+- id: pagination
+  conforms: true
+  evidence: Links (Self/First/Prev/Next/Last) + Meta.TotalPages page-based pagination on collection reads

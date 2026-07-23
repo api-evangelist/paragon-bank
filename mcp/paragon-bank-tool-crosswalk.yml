@@ -1,0 +1,6 @@
+generated: '2026-07-23'
+method: derived
+source: mcp/paragon-bank-mcp.yml, openapi/*.yaml
+note: >-
+  Each candidate MCP tool binds 1:1 to its backing OBIE operationId and inherits that operation's
+  parameters + requestBody as its real inputSchema. No live MCP/GraphQL surface exists for Paragon.

@@ -1,0 +1,64 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/obie-account-info-standard.yaml, openapi/obie-payment-initiation-standard.yaml, openapi/obie-confirmation-funds-standard.yaml, openapi/obie-opendata-standard.json
+format: obie-oberror
+note: >-
+  Derived from the OBIE Read/Write v4.0.1 + Open Data v1.3 standard responses captured in this
+  repo. Paragon Bank publishes no confirmed endpoint; these are the standard's error semantics.
+error_envelope:
+  schema: OBErrorResponse1
+  media_type: application/json
+  fields:
+  - Code
+  - Id
+  - Message
+  - Errors[] (ErrorCode, Message, Path, Url)
+  note: OBIE uses its own OBErrorResponse1 envelope, not RFC 9457 application/problem+json. ErrorCode
+    values are drawn from the OBIE External/Internal CodeSets (e.g. UK.OBIE.Field.Invalid, UK.OBIE.Resource.NotFound,
+    UK.OBIE.Unsupported.Currency).
+problems:
+- status: 400
+  title: Bad request
+  detail: The request was malformed or failed OBIE/JWS validation. Body carries an OBErrorResponse1 with
+    granular OBError1 ErrorCode(s).
+- status: 401
+  title: Unauthorized
+  detail: Missing, expired, or invalid FAPI access token / SCA. Re-authenticate the PSU or refresh the
+    TPP token.
+- status: 403
+  title: Forbidden
+  detail: The token is valid but lacks the scope/consent for this resource. Check the granted consent
+    and OAuth scope.
+- status: 404
+  title: Not found
+  detail: The requested resource (consent, account, payment) does not exist or is not visible to this
+    TPP.
+- status: 405
+  title: Method Not Allowed
+  detail: HTTP method not supported for this resource.
+- status: 406
+  title: Not Acceptable
+  detail: The Accept header requests a representation the ASPSP cannot produce.
+- status: 408
+  title: Request Timeout
+  detail: The ASPSP timed out serving the Open Data request.
+- status: 409
+  title: Conflict
+  detail: 'Idempotency conflict: the x-idempotency-key was reused with a different request payload within
+    its 24h window.'
+- status: 415
+  title: Unsupported Media Type
+  detail: Content-Type is not application/json (or application/jose+jwe where signing is required).
+- status: 422
+  title: Unprocessable Entity
+  detail: The request is well-formed but semantically invalid (e.g. business-rule/consent failure). OBErrorResponse1
+    details the reason.
+- status: 429
+  title: Too Many Requests
+  detail: Rate limit exceeded. Honour Retry-After and back off.
+- status: 500
+  title: Internal Server Error
+  detail: Unexpected ASPSP-side error.
+- status: 503
+  title: Service Unavailable
+  detail: ASPSP temporarily unavailable (Open Data reference implementation).
