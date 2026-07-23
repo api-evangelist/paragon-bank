@@ -1,0 +1,98 @@
+aid: paragon-bank
+name: Paragon Bank
+review:
+  question: Does Paragon Bank publish its own public developer portal or Open Banking API surface?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+  openDataConfirmed: false
+  readWriteConfirmed: false
+findings:
+  summary: |
+    Paragon Bank PLC (FRN 604551, company number 05390593) is a UK specialist
+    lender and retail savings bank - the principal banking subsidiary of
+    Paragon Banking Group PLC (LSE: PAG, FTSE 250). It offers fixed-rate and
+    easy-access savings, cash ISAs, buy-to-let and residential mortgages,
+    second-charge mortgages, development finance, motor finance, and asset and
+    commercial lending. It does NOT offer personal current accounts, is NOT one
+    of the CMA9, and publishes NO public developer portal and NO Open Banking
+    API surface of its own. No developer/API subdomain resolves
+    (developer.paragonbank.co.uk and openbanking.paragonbank.co.uk both fail to
+    resolve), the corporate site sits behind a WAF that returns HTTP 403 to
+    non-browser clients, and the Open Banking Tracker lists "No API products"
+    for Paragon. Third-party access to Paragon savings accounts, where offered,
+    is achieved only via account-information aggregators (Plaid, Tink,
+    TrueLayer), not a first-party bank API.
+  openBankingPosture: |
+    As a savings-and-lending institution without payment/current accounts,
+    Paragon has no CMA9 Open Data obligation and no mandated Read/Write (PSD2)
+    exposure. This profile represents the UK OBIE standard purely as the shared
+    industry specification an FCA-authorised ASPSP would conform to - the Open
+    Data reference APIs and the FAPI-secured Read/Write family (AIS, PIS,
+    CBPII). Every apis[] entry is explicitly labelled "OBIE standard,
+    unverified" and carries NO Paragon-hosted baseURL, because none was
+    confirmed. The Read/Write auth model per the standard is FAPI-grade
+    OAuth2/OIDC + mutual-TLS + PSD2 strong customer authentication with
+    OBIE/eIDAS certificates; none of this is provisioned by Paragon publicly.
+  specProvenance:
+    - spec: openapi/obie-opendata-standard.json
+      provenance: OBIE-standard
+      source: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+      note: Shared OBIE Open Data API (Swagger 2.0). NOT a Paragon contract.
+    - spec: openapi/obie-account-info-standard.yaml
+      provenance: OBIE-standard
+      source: https://github.com/OpenBankingUK/read-write-api-specs
+      note: Shared OBIE Account & Transaction (AIS) standard (OpenAPI 3.0). NOT a Paragon contract.
+    - spec: openapi/obie-payment-initiation-standard.yaml
+      provenance: OBIE-standard
+      source: https://github.com/OpenBankingUK/read-write-api-specs
+      note: Shared OBIE Payment Initiation (PIS) standard (OpenAPI 3.0). NOT a Paragon contract.
+    - spec: openapi/obie-confirmation-funds-standard.yaml
+      provenance: OBIE-standard
+      source: https://github.com/OpenBankingUK/read-write-api-specs
+      note: Shared OBIE Confirmation of Funds (CBPII) standard (OpenAPI 3.0). NOT a Paragon contract.
+  transports:
+    - protocol: REST
+      scheme: https
+      note: OBIE Open Data is unauthenticated REST/JSON per the standard; no Paragon host confirmed.
+      documented: false
+    - protocol: REST
+      scheme: https
+      note: OBIE Read/Write (AIS/PIS/CBPII) is FAPI-secured REST/JSON per the standard; no Paragon host confirmed.
+      documented: false
+  probes:
+    - url: https://www.paragonbank.co.uk/
+      status: 403
+      note: WAF blocks non-browser agents; site exists (savings/mortgages/loans).
+    - url: https://developer.paragonbank.co.uk/
+      status: 000
+      note: Does not resolve - no developer portal.
+    - url: https://openbanking.paragonbank.co.uk/
+      status: 000
+      note: Does not resolve - no Open Banking host.
+    - url: https://api.paragonbank.co.uk/
+      status: 403
+      note: WAF response; no documented public API.
+    - url: https://www.paragonbank.co.uk/open-banking/v2.3/atms
+      status: 403
+      note: WAF response, not a confirmed Open Data endpoint (no live 200/JSON obtained).
+sources:
+  - url: https://www.openbankingtracker.com/provider/paragonbank-uk
+    type: Reference
+    note: Lists "No API products" for Paragon Bank; access only via aggregators.
+  - url: https://www.paragonbank.co.uk/who-we-are
+    type: About
+    note: Bank identity, products, and regulatory status.
+  - url: https://en.wikipedia.org/wiki/Paragon_Banking_Group
+    type: Reference
+    note: Group history (founded 1985), FTSE 250, Solihull HQ, specialist-lending focus.
+  - url: https://register.fca.org.uk/
+    type: Compliance
+    note: Paragon Bank PLC authorised by PRA, regulated by FCA and PRA (FRN 604551).
+actions:
+  status: built-stub
+  reason: |
+    Identity captured from primary and reference sources; no first-party API
+    surface exists. OBIE standard specs harvested verbatim into openapi/ and
+    represented as shared-standard, unverified entries with no fabricated
+    Paragon host. Enrichment pipeline runs separately.
