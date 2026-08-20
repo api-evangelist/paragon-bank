@@ -17,6 +17,17 @@ description: 'Paragon Bank PLC is a UK specialist lender and retail savings bank
   as unverified for this bank; no Paragon-hosted endpoint was confirmed at profiling time.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
+- Financial-Services
+- Banking
+- Savings
+- Mortgages
+- Specialist Lender
+- Open Banking
+- PSD2
+- OBIE
+- United Kingdom
+- Account Information
+tags_raw:
 - Financial Services
 - Banking
 - Savings
@@ -59,6 +70,11 @@ apis:
     time.
   humanURL: https://openbankinguk.github.io/read-write-api-site3/v3.1.11/profiles/account-and-transaction-api-profile.html
   tags:
+  - Account Information
+  - Transaction
+  - AIS
+  - FAPI
+  tags_raw:
   - Account Information
   - Transactions
   - AIS
