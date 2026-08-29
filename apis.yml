@@ -892,6 +892,9 @@ apis:
     url: >-
       https://openbankinguk.github.io/read-write-api-site3/v3.1.11/profiles/confirmation-of-funds-api-profile.html
 common:
+- type: CapabilityMap
+  url: capabilities/paragon-bank-capability-edges.yml
+  name: Paragon Bank Business Capability Map
 - type: AgenticAccess
   url: agentic-access/paragon-bank-agentic-access.yml
 - type: DomainSecurity
