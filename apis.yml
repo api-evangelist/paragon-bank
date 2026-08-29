@@ -15,6 +15,18 @@ description: 'Paragon Bank PLC is a UK specialist lender and retail savings bank
   reference APIs and the FAPI-secured Read/Write family (Account and Transaction Information, Payment
   Initiation, Confirmation of Funds) - captured verbatim as the shared industry standard and clearly labelled
   as unverified for this bank; no Paragon-hosted endpoint was confirmed at profiling time.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - Financial-Services
