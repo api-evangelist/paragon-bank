@@ -1,0 +1,11 @@
+[
+  {
+    "repo": "paragon-bank",
+    "captured_at": "2026-10-11T192119",
+    "source_url": "https://www.paragonbank.co.uk/",
+    "source_type": "Website",
+    "file": "paragon-bank-2026-10-11T192119.png",
+    "bytes": 438638,
+    "capture": "playwright-local"
+  }
+]
