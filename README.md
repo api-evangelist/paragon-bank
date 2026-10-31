@@ -1,4 +1,4 @@
-# Paragon Bank (paragon-bank)
+# Paragon Bank
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,119 +64,153 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Paragon Bank PLC is a UK specialist lender and retail savings bank, the principal banking subsidiary of Paragon Banking Group PLC (LSE: PAG), a FTSE 250 company founded in 1985 and headquartered in Solihull, West Midlands. Authorised by the Prudential Regulation Authority and regulated by the FCA and PRA (Firm Reference Number 604551, company number 05390593), Paragon offers fixed-rate and easy-access savings accounts and cash ISAs alongside buy-to-let and residential mortgages, second-charge mortgages, development finance, motor finance, and asset and commercial lending.
+Paragon Bank PLC is a UK specialist lender and retail savings bank, the principal banking subsidiary of Paragon Banking Group PLC (LSE: PAG), a FTSE 250 company founded in 1985 and headquartered in Solihull, West Midlands. Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority (Firm Reference Number 604551, company number 05390593), Paragon offers fixed-rate and easy-access savings accounts and cash ISAs alongside buy-to-let and residential mortgages, second-charge mortgages, development finance, motor finance, and asset and commercial lending. As a savings-and-lending institution rather than a personal current account provider, Paragon is not one of the CMA9 and publishes no public developer portal or Open Banking API surface of its own - its accounts are reachable to third parties only through account-information aggregators. This profile represents the UK Open Banking Implementation Entity (OBIE) standard - the PSD2 Open Data reference APIs and the FAPI-secured Read/Write family (Account and Transaction Information, Payment Initiation, Confirmation of Funds) - captured verbatim as the shared industry standard and clearly labelled as unverified for this bank; no Paragon-hosted endpoint was confirmed at profiling time.
 
-As a savings-and-lending institution rather than a personal current account provider, Paragon is **not one of the CMA9** and publishes **no public developer portal or Open Banking API surface of its own**. Its accounts are reachable to third parties only through account-information aggregators (e.g. Plaid, Tink, TrueLayer). This repository therefore represents the UK Open Banking Implementation Entity (OBIE) standard that an FCA-authorised ASPSP conforms to, captured verbatim from the OBIE specifications and **clearly labelled as unverified for this bank** — no Paragon-hosted endpoint was confirmed at profiling time.
+**Areas:** Financial Services · Banking · Savings · Mortgage · Specialist Lender · Open Banking · PSD2 · OBIE · United Kingdom · Account Information
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/paragon-bank/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/paragon-bank/refs/heads/main/apis.yml)
+## Paragon Bank on APIs.io
 
-## Tags
+Everything profiled for Paragon Bank is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/paragon-bank/](https://apis.io/providers/paragon-bank/)** — or go straight to one of the APIs or properties below.
 
-- Financial Services
-- Banking
-- Savings
-- Mortgages
-- Specialist Lender
-- Open Banking
-- PSD2
-- OBIE
-- United Kingdom
-- Account Information
+### APIs (34)
 
-## Timestamps
+- [Paragon Bank Account Access Consents API](https://apis.io/apis/paragon-bank/paragon-bank-account-access-consents-api/) — The Account Access Consents API from Paragon Bank — 2 operation(s) for account access consents.
+- [Paragon Bank Accounts API](https://apis.io/apis/paragon-bank/paragon-bank-accounts-api/) — The Accounts API from Paragon Bank — 2 operation(s) for accounts.
+- [Paragon Bank ATM API](https://apis.io/apis/paragon-bank/paragon-bank-atm-api/) — Endpoint for getting ATM data
+- [Paragon Bank Balances API](https://apis.io/apis/paragon-bank/paragon-bank-balances-api/) — The Balances API from Paragon Bank — 2 operation(s) for balances.
+- [Paragon Bank BCA API](https://apis.io/apis/paragon-bank/paragon-bank-bca-api/) — Endpoint for getting Business Current Account data
+- [Paragon Bank Beneficiaries API](https://apis.io/apis/paragon-bank/paragon-bank-beneficiaries-api/) — The Beneficiaries API from Paragon Bank — 2 operation(s) for beneficiaries.
+- [Paragon Bank Branch API](https://apis.io/apis/paragon-bank/paragon-bank-branch-api/) — Endpoint for getting Branch data
+- [Paragon Bank CCC API](https://apis.io/apis/paragon-bank/paragon-bank-ccc-api/) — Endpoint for getting Commercial Credit Card data
+- [Paragon Bank Direct Debits API](https://apis.io/apis/paragon-bank/paragon-bank-direct-debits-api/) — The Direct Debits API from Paragon Bank — 2 operation(s) for direct debits.
+- [Paragon Bank Domestic Payment Consents API](https://apis.io/apis/paragon-bank/paragon-bank-domestic-payment-consents-api/) — The Domestic Payment Consents API from Paragon Bank — 3 operation(s) for domestic payment consents.
+- [Paragon Bank Domestic Payments API](https://apis.io/apis/paragon-bank/paragon-bank-domestic-payments-api/) — The Domestic Payments API from Paragon Bank — 3 operation(s) for domestic payments.
+- [Paragon Bank Domestic Scheduled Payment Consents API](https://apis.io/apis/paragon-bank/paragon-bank-domestic-scheduled-payment-consents-api/) — The Domestic Scheduled Payment Consents API from Paragon Bank — 2 operation(s) for domestic scheduled payment consents.
+- [Paragon Bank Domestic Scheduled Payments API](https://apis.io/apis/paragon-bank/paragon-bank-domestic-scheduled-payments-api/) — The Domestic Scheduled Payments API from Paragon Bank — 3 operation(s) for domestic scheduled payments.
+- [Paragon Bank Domestic Standing Order Consents API](https://apis.io/apis/paragon-bank/paragon-bank-domestic-standing-order-consents-api/) — The Domestic Standing Order Consents API from Paragon Bank — 2 operation(s) for domestic standing order consents.
+- [Paragon Bank Domestic Standing Orders API](https://apis.io/apis/paragon-bank/paragon-bank-domestic-standing-orders-api/) — The Domestic Standing Orders API from Paragon Bank — 3 operation(s) for domestic standing orders.
+- [Paragon Bank File Payment Consents API](https://apis.io/apis/paragon-bank/paragon-bank-file-payment-consents-api/) — The File Payment Consents API from Paragon Bank — 3 operation(s) for file payment consents.
+- [Paragon Bank File Payments API](https://apis.io/apis/paragon-bank/paragon-bank-file-payments-api/) — The File Payments API from Paragon Bank — 4 operation(s) for file payments.
+- [Paragon Bank Funds Confirmation Consents API](https://apis.io/apis/paragon-bank/paragon-bank-funds-confirmation-consents-api/) — The Funds Confirmation Consents API from Paragon Bank — 2 operation(s) for funds confirmation consents.
+- [Paragon Bank Funds Confirmations API](https://apis.io/apis/paragon-bank/paragon-bank-funds-confirmations-api/) — The Funds Confirmations API from Paragon Bank — 1 operation(s) for funds confirmations.
+- [Paragon Bank International Payment Consents API](https://apis.io/apis/paragon-bank/paragon-bank-international-payment-consents-api/) — The International Payment Consents API from Paragon Bank — 3 operation(s) for international payment consents.
+- [Paragon Bank International Payments API](https://apis.io/apis/paragon-bank/paragon-bank-international-payments-api/) — The International Payments API from Paragon Bank — 3 operation(s) for international payments.
+- [Paragon Bank International Scheduled Payments API](https://apis.io/apis/paragon-bank/paragon-bank-international-scheduled-payments-api/) — The International Scheduled Payments API from Paragon Bank — 3 operation(s) for international scheduled payments.
+- [Paragon Bank International Scheduled Payments Consents API](https://apis.io/apis/paragon-bank/paragon-bank-international-scheduled-payments-consents-api/) — The International Scheduled Payments Consents API from Paragon Bank — 3 operation(s) for international scheduled payments consents.
+- [Paragon Bank International Standing Orders API](https://apis.io/apis/paragon-bank/paragon-bank-international-standing-orders-api/) — The International Standing Orders API from Paragon Bank — 3 operation(s) for international standing orders.
+- [Paragon Bank International Standing Orders Consents API](https://apis.io/apis/paragon-bank/paragon-bank-international-standing-orders-consents-api/) — The International Standing Orders Consents API from Paragon Bank — 2 operation(s) for international standing orders consents.
+- [Paragon Bank Offers API](https://apis.io/apis/paragon-bank/paragon-bank-offers-api/) — The Offers API from Paragon Bank — 2 operation(s) for offers.
+- [Paragon Bank Parties API](https://apis.io/apis/paragon-bank/paragon-bank-parties-api/) — The Parties API from Paragon Bank — 3 operation(s) for parties.
+- [Paragon Bank PCA API](https://apis.io/apis/paragon-bank/paragon-bank-pca-api/) — Endpoint for getting Personal Current Account data
+- [Paragon Bank Products API](https://apis.io/apis/paragon-bank/paragon-bank-products-api/) — The Products API from Paragon Bank — 2 operation(s) for products.
+- [Paragon Bank Scheduled Payments API](https://apis.io/apis/paragon-bank/paragon-bank-scheduled-payments-api/) — The Scheduled Payments API from Paragon Bank — 2 operation(s) for scheduled payments.
+- [Paragon Bank SME API](https://apis.io/apis/paragon-bank/paragon-bank-sme-api/) — Endpoint for getting Unsecured SME Loan data
+- [Paragon Bank Standing Orders API](https://apis.io/apis/paragon-bank/paragon-bank-standing-orders-api/) — The Standing Orders API from Paragon Bank — 2 operation(s) for standing orders.
+- [Paragon Bank Statements API](https://apis.io/apis/paragon-bank/paragon-bank-statements-api/) — The Statements API from Paragon Bank — 5 operation(s) for statements.
+- [Paragon Bank Transactions API](https://apis.io/apis/paragon-bank/paragon-bank-transactions-api/) — The Transactions API from Paragon Bank — 2 operation(s) for transactions.
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-> All API entries below are the **shared OBIE standard specifications**, not confirmed Paragon-hosted contracts. Paragon Bank does not document a developer portal, an Open Data endpoint, or Read/Write onboarding.
+#### MCP servers (1)
 
-### Paragon Bank Open Data API (OBIE standard, unverified)
+Model Context Protocol servers that expose the API to agents.
 
-The UK Open Banking Open Data API — a public, unauthenticated reference-data surface (ATMs, branches, personal and business current accounts, unsecured SME loans, commercial credit cards) defined by the OBIE. Captured as the shared standard; Paragon publishes no confirmed Open Data endpoint and, without current accounts, has no CMA9 Open Data obligation.
+- [paragon-bank-mcp.yml](https://apis.io/servers/paragon-bank/paragon-bank-mcp-yml/)
 
-- **Human URL:** [https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/](https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/)
+#### Agentic access (1)
 
-#### Tags
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- Open Data
-- Reference Data
-- Public
+- [Paragon Bank Agentic Access](https://apis.io/agentic-access/paragon-bank/paragon-bank-agentic-access/)
 
-#### Properties
+#### Collections (1)
 
-- [OpenAPI](openapi/obie-opendata-standard.json) — shared OBIE Open Data standard (Swagger 2.0)
-- [Documentation](https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/)
-- [API Reference](https://github.com/OpenBankingUK/opendata-api-spec-compiled)
+Postman and Open Collection request collections.
 
-### Paragon Bank Account and Transaction Information API (OBIE standard, unverified)
+- [Open Data API](https://apis.io/collections/paragon-bank/open-obie-opendata-standard/)
 
-The OBIE Read/Write Account and Transaction Information (AIS) API standard — FAPI-secured (OAuth2/OIDC, mutual-TLS, PSD2 strong customer authentication) account, balance, transaction, and party data access for authorised third parties. Shared OBIE standard, not a Paragon-hosted contract.
+#### Overlays (4)
 
-- **Human URL:** [Account and Transaction API Profile](https://openbankinguk.github.io/read-write-api-site3/v3.1.11/profiles/account-and-transaction-api-profile.html)
+OpenAPI overlays, including conversational phrasing for each operation.
 
-#### Tags
+- [Paragon Bank Account Info Overlay](https://apis.io/overlays/paragon-bank/paragon-bank-account-info-overlay/)
+- [Paragon Bank Confirmation Funds Overlay](https://apis.io/overlays/paragon-bank/paragon-bank-confirmation-funds-overlay/)
+- [Paragon Bank Opendata Overlay](https://apis.io/overlays/paragon-bank/paragon-bank-opendata-overlay/)
+- [Paragon Bank Payment Initiation Overlay](https://apis.io/overlays/paragon-bank/paragon-bank-payment-initiation-overlay/)
 
-- Account Information
-- Transactions
-- AIS
-- FAPI
+#### Security (2)
 
-#### Properties
+Authentication, trust centre, and vulnerability disclosure.
 
-- [OpenAPI](openapi/obie-account-info-standard.yaml) — shared OBIE Read/Write standard (OpenAPI 3.0)
-- [Documentation](https://openbankinguk.github.io/read-write-api-site3/v3.1.11/profiles/account-and-transaction-api-profile.html)
-- [API Reference](https://github.com/OpenBankingUK/read-write-api-specs)
+- [Paragon Bank Authentication](https://apis.io/security/paragon-bank/paragon-bank-authentication/)
+- [Paragon Bank Domain Security](https://apis.io/security/paragon-bank/paragon-bank-domain-security/)
 
-### Paragon Bank Payment Initiation API (OBIE standard, unverified)
+#### OAuth scopes (1)
 
-The OBIE Read/Write Payment Initiation (PIS) API standard — FAPI-secured initiation of domestic, scheduled, standing-order, international, and file payments with PSD2 strong customer authentication. Shared OBIE standard, not a Paragon-hosted contract; Paragon does not document payment-initiation services.
+The permissions the API asks for.
 
-- **Human URL:** [Payment Initiation API Profile](https://openbankinguk.github.io/read-write-api-site3/v3.1.11/profiles/payment-initiation-api-profile.html)
+- [Paragon Bank Scopes](https://apis.io/scopes/paragon-bank/paragon-bank-scopes/)
 
-#### Tags
+## Where to find this API
 
-- Payment Initiation
-- Payments
-- PIS
-- FAPI
-
-#### Properties
-
-- [OpenAPI](openapi/obie-payment-initiation-standard.yaml) — shared OBIE Read/Write standard (OpenAPI 3.0)
-- [Documentation](https://openbankinguk.github.io/read-write-api-site3/v3.1.11/profiles/payment-initiation-api-profile.html)
-- [API Reference](https://github.com/OpenBankingUK/read-write-api-specs)
-
-### Paragon Bank Confirmation of Funds API (OBIE standard, unverified)
-
-The OBIE Read/Write Confirmation of Funds (CBPII) API standard — FAPI-secured yes/no confirmation of available funds for a card-based payment instrument issuer. Shared OBIE standard, not a Paragon-hosted contract.
-
-- **Human URL:** [Confirmation of Funds API Profile](https://openbankinguk.github.io/read-write-api-site3/v3.1.11/profiles/confirmation-of-funds-api-profile.html)
-
-#### Tags
-
-- Confirmation of Funds
-- CBPII
-- FAPI
-
-#### Properties
-
-- [OpenAPI](openapi/obie-confirmation-funds-standard.yaml) — shared OBIE Read/Write standard (OpenAPI 3.0)
-- [Documentation](https://openbankinguk.github.io/read-write-api-site3/v3.1.11/profiles/confirmation-of-funds-api-profile.html)
-- [API Reference](https://github.com/OpenBankingUK/read-write-api-specs)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.paragonbank.co.uk/)
-- [About](https://www.paragonbank.co.uk/who-we-are)
-- [Paragon Banking Group (parent)](https://www.paragonbankinggroup.co.uk/)
-- [LinkedIn](https://uk.linkedin.com/company/paragon-banking-group-plc)
+- [Pricing](https://www.paragonbank.co.uk/savings)
 - [Support](https://www.paragonbank.co.uk/contact-us)
-- [Savings rates](https://www.paragonbank.co.uk/savings)
-- [Terms of Service](https://www.paragonbank.co.uk/resources/paragonbank/documents/savings/general-terms-and-conditions)
+- [Terms of service](https://www.paragonbank.co.uk/resources/paragonbank/documents/savings/general-terms-and-conditions)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 31.9** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 69.6 |
+| Contract quality | 46.9 |
+| Contract governance | 4.5 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 35.1 |
+| Access clarity | 21.1 |
+
+**Agent readiness 35.4** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | verified |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | verified |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 34.6** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/paragon-bank/](https://apis.io/providers/paragon-bank/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Paragon Bank: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/paragon-bank/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
